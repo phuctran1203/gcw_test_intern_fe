@@ -169,3 +169,14 @@ window.addEventListener("scroll", function () {
 	// Cập nhật vị trí cuộn trước đó
 	lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
 });
+
+//handle open and close header in mobile screen
+const header = document.querySelector("header");
+function openHeader() {
+	mobileHeader.classList.add("hide");
+	header.classList.add("show");
+}
+function closeHeader() {
+	mobileHeader.classList.remove("hide");
+	header.classList.remove("show");
+}

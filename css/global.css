@@ -15,11 +15,11 @@
 	--fs-md: clamp(16px, 1vw, 20px);
 	--fs-lg: clamp(20px, 1.2vw, 24px);
 	--fs-xl: clamp(28px, 1.5vw, 32px);
-	--fs-2xl: clamp(36px, 2vw, 40px);
-	--fs-3xl: clamp(42px, 2.5vw, 48px);
+	--fs-2xl: clamp(34px, 2vw, 40px);
+	--fs-3xl: clamp(40px, 2.5vw, 48px);
 	--fs-4xl: clamp(48px, 3vw, 64px);
 	/* other var */
-	--padding-x: clamp(8px, 5vw, 200px);
+	--padding-x: clamp(10px, 5vw, 200px);
 }
 body {
 	font-family: Arial, Helvetica, sans-serif;
@@ -82,7 +82,7 @@ a {
 }
 .btn-ghost {
 	padding: 1rem 6px;
-	background-color: transparent;
+	background-color: var(--text-white);
 	border: 0;
 	transition: 0.1s linear;
 	&:hover {

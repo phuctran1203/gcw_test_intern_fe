@@ -18,53 +18,65 @@
 		<script defer src="./js/index.js"></script>
 	</head>
 	<body>
-		<header>
+		<div class="mobile-header">
 			<!-- logo -->
-			<img src="./assets/logo.svg" alt="" width="48px" />
+			<img class="logo" src="./assets/logo.svg" alt="" width="48px" />
+			<i class="fa-solid fa-bars" id="toggle-open-header" onclick="openHeader()"></i>
+		</div>
+		<header>
+			<div class="logo">
+				<!-- logo -->
+				<img src="./assets/logo.svg" alt="" width="48px" />
+				<i id="toggle-close-header" class="fa-solid fa-xmark" onclick="closeHeader()"></i>
+			</div>
 			<!-- nav -->
 			<div class="nav">
 				<a href="" class="bold">Về chúng tôi</a>
-				<button class="bold add-cursor" popovertarget="popover-service" id="service">Dịch vụ</button>
-				<div popover id="popover-service" class="popover popover-nav-item">
-					<a href="" class="btn-ghost">Logistic</a>
-					<a href="" class="btn-ghost">Giải pháp kinh doanh hàng hóa quốc tế</a>
-					<a href="" class="btn-ghost">Outsourcing về hàng hóa</a>
+				<div>
+					<label for="cb-dv" class="bold add-cursor">Dịch vụ</label>
+					<input type="checkbox" id="cb-dv" style="visibility: hidden; position: absolute" />
+					<div class="extended-nav">
+						<a href="" class="btn-ghost">Logistic</a>
+						<a href="" class="btn-ghost">Giải pháp kinh doanh hàng hóa quốc tế</a>
+						<a href="" class="btn-ghost">Outsourcing về hàng hóa</a>
+					</div>
 				</div>
+
 				<a href="" class="bold">Sản phẩm</a>
-				<button class="bold add-cursor" popovertarget="popover-news-market" id="news-market">
-					Tin tức & Thị trường
-				</button>
-				<div popover id="popover-news-market" class="popover popover-nav-item">
-					<a href="" class="btn-ghost">Tin tức thị trường</a>
-					<a href="" class="btn-ghost">Tin tức báo chí</a>
+				<div>
+					<label for="cb-news" class="bold add-cursor">Tin tức & Thị trường</label>
+					<input type="checkbox" id="cb-news" style="visibility: hidden; position: absolute" />
+					<div class="extended-nav">
+						<a href="" class="btn-ghost">Tin tức thị trường</a>
+						<a href="" class="btn-ghost">Tin tức báo chí</a>
+					</div>
 				</div>
-				<button class="bold add-cursor" popovertarget="popover-staff" id="staff">Nhân lực</button>
-				<div popover id="popover-staff" class="popover popover-nav-item">
-					<a href="" class="btn-ghost">Tuyển dụng</a>
-					<a href="" class="btn-ghost">Hoạt động nhân lực</a>
+				<div>
+					<label for="cb-staff" class="bold add-cursor">Nhân lực</label>
+					<input type="checkbox" id="cb-staff" style="visibility: hidden; position: absolute" />
+					<div class="extended-nav">
+						<a href="" class="btn-ghost">Tuyển dụng</a>
+						<a href="" class="btn-ghost">Hoạt động nhân lực</a>
+					</div>
 				</div>
 				<a href="" class="bold">Video & Hình ảnh</a>
 				<a href="" class="bold">Liên hệ</a>
 			</div>
 			<!-- language -->
-			<div>
-				<button popovertarget="popover-language" id="btn-language" class="add-cusor">
+			<div class="language">
+				<label for="cb-language" id="btn-language" class="add-cusor">
 					<i class="fa-solid fa-earth-asia"></i>
 					<span id="language-label" class="bold">VI</span>
 					<i class="fa-solid fa-chevron-down"></i>
-				</button>
-				<div popover id="popover-language" class="popover">
+				</label>
+				<input type="checkbox" id="cb-language" style="visibility: hidden; position: absolute" />
+				<div class="extended-nav">
 					<button class="btn-ghost" data-value="EN" onclick="changeLanguage(event)">Tiếng Anh</button>
 					<button class="btn-ghost" data-value="VI" onclick="changeLanguage(event)">Tiếng Việt</button>
 					<button class="btn-ghost" data-value="TQ" onclick="changeLanguage(event)">Tiếng Trung</button>
 				</div>
 			</div>
 		</header>
-		<div class="mobile-header">
-			<!-- logo -->
-			<img src="./assets/logo.svg" alt="" width="48px" />
-			<i class="fa-solid fa-bars" id="toggle-nav"></i>
-		</div>
 
 		<!-- hero -->
 		<section class="hero" style="background-image: url(./assets/images/hero_06.png)">

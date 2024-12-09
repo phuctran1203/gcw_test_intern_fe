@@ -31,10 +31,102 @@
 }
 @media (max-width: 768px) {
 	header {
-		display: none;
+		transform: translateX(-100%);
+		background-color: var(--text-white);
+		box-shadow: none;
+		width: min(500px, 100%);
+		height: 100vh;
+		overflow: auto;
+		position: fixed;
+		flex-direction: column;
+		align-items: start;
+		justify-content: flex-start;
+		padding: 10px var(--padding-x);
+		gap: 2rem;
+		transition: 0.12s ease;
+		&.show {
+			transform: translateX(0);
+		}
+		.logo {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			img {
+				width: 40px;
+			}
+			i {
+				display: block;
+			}
+		}
+		.nav {
+			flex-direction: column;
+			align-items: start;
+			width: 100%;
+			> * {
+				width: 100%;
+				margin: 0;
+				label {
+					height: fit-content;
+				}
+				.extended-nav {
+					display: none;
+					opacity: 1;
+					margin-top: 10px;
+					text-align: left;
+					width: 100%;
+					position: static;
+					visibility: visible;
+					> * {
+						padding: 12px;
+					}
+				}
+
+				input:checked + .extended-nav {
+					display: grid;
+					gap: 1px;
+				}
+			}
+		}
+		.language {
+			width: 100%;
+			margin: 0;
+			label {
+				display: block;
+				height: fit-content;
+			}
+			.extended-nav {
+				position: static;
+			}
+			&:hover .extended-nav {
+				display: none;
+			}
+
+			input:checked + .extended-nav {
+				display: grid;
+			}
+		}
 	}
 	.mobile-header {
 		display: flex;
+		position: fixed;
+		z-index: 100;
+		width: 100%;
+		background-color: var(--text-white);
+		justify-content: space-between;
+		align-items: center;
+		color: var(--secondary-color);
+		padding: 0.4rem var(--padding-x);
+		transition: 0.1s linear;
+		img {
+			width: 40px;
+		}
+		#toggle-open-header {
+			font-size: var(--fs-2xl);
+		}
+		&.hide {
+			display: none;
+		}
 	}
 	.hero {
 		padding-top: 60px;
@@ -59,11 +151,19 @@
 	.service {
 		display: none;
 	}
-	.partner .wrapper-slider .slider > * {
-		--total-item: 4;
+	.partner {
+		h3 {
+			padding-inline: 1rem;
+		}
+		.wrapper-slider .slider > * {
+			--total-item: 4;
+		}
 	}
-	.feedback .wrapper-card {
-		grid-template-columns: 1fr;
+	.feedback {
+		gap: 2rem;
+		.wrapper-card {
+			grid-template-columns: 1fr;
+		}
 	}
 	footer .main-footer {
 		grid-template-columns: 1fr;
@@ -74,7 +174,8 @@
 		form .wrapper-input {
 			flex-direction: column;
 			align-items: start;
-			gap: 10px;
+			gap: 1rem;
+			border: 0;
 		}
 		> :last-child {
 			margin-bottom: 80px;
@@ -83,7 +184,7 @@
 }
 @media (max-width: 480px) {
 	:root {
-		--padding-x: 8px;
+		--padding-x: 12px;
 	}
 	.reason {
 		grid-template-columns: 1fr;
