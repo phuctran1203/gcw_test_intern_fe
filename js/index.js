@@ -121,3 +121,30 @@ const imageSupportReason = document.querySelector(".image-support");
 function handleSwitchImgSupport() {
 	imageSupportReason.appendChild(imageSupportReason.firstElementChild);
 }
+
+const listImage = [
+	{
+		label: "Cung cấp giải pháp về hậu cần",
+		srcImg: "./assets/images/service_01.png",
+	},
+	{
+		label: "Giải pháp hàng hóa quốc tế",
+		srcImg: "./assets/images/hero_04.jpg",
+	},
+	{
+		label: "Outsourcing hàng hóa",
+		srcImg: "./assets/images/hero_05.png",
+	},
+];
+let currentImg = 0;
+const service = document.querySelector(".service");
+const imgService = service.querySelector("img");
+const labelService = service.querySelector(".label-service");
+const btnNext = document.querySelector(".next");
+
+btnNext.addEventListener("click", () => {
+	currentImg = currentImg >= listImage.length - 1 ? 0 : currentImg + 1;
+	service.style.backgroundImage = `url(${listImage[currentImg].srcImg})`;
+	labelService.innerText = listImage[currentImg].label;
+	imgService.src = listImage[currentImg].srcImg;
+});

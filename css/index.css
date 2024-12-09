@@ -271,7 +271,6 @@ header #popover-language {
 
 /* ##### service ##### */
 .service {
-	background-image: url("/assets/images/service_01.png");
 	aspect-ratio: 16/9;
 	background-repeat: no-repeat;
 	background-position: center;
