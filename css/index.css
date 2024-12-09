@@ -1,5 +1,8 @@
 @import url(./global.css);
-/* for testing layout */
+
+/* style code css - nesting */
+
+/* for testing layout only <3 */
 /* body * {
 	border: 1px solid rgb(255, 123, 123); 
 } */
@@ -18,15 +21,15 @@ header {
 	padding: 0.8rem var(--padding-x);
 	background-color: hsla(0, 0%, 100%, 0.6);
 	box-shadow: 0 4px 8px 1px hsla(0, 0%, 100%, 0.6);
-	.logo {
-		i {
-			font-size: var(--fs-2xl);
-			color: var(--secondary-color);
-			display: none;
-		}
+	.logo i {
+		font-size: var(--fs-2xl);
+		color: var(--secondary-color);
+		display: none;
 	}
 }
+
 header .extended-nav {
+	/* this class for nav and language*/
 	width: 180px;
 	display: grid;
 	position: absolute;
@@ -37,6 +40,7 @@ header .extended-nav {
 	visibility: hidden;
 	transition: 0.1s linear;
 }
+
 header .nav {
 	display: flex;
 	> * {
@@ -79,7 +83,7 @@ header .language {
 	}
 }
 
-/* button */
+/* button - CTA btn */
 .btn-more {
 	.icon-btn {
 		width: 28px;
@@ -331,7 +335,7 @@ header .language {
 	}
 }
 
-/* partner */
+/* ##### partner ##### */
 .partner {
 	color: var(--secondary-color);
 	display: grid;
@@ -361,6 +365,7 @@ header .language {
 	}
 }
 
+/* ##### reason why choose us section #### */
 .reason {
 	color: var(--secondary-color);
 	padding: 5rem var(--padding-x);
@@ -436,7 +441,8 @@ header .language {
 		}
 	}
 }
-/* feedback */
+
+/* ##### feedback ##### */
 .feedback {
 	background-color: var(--secondary-color);
 	padding: 4rem var(--padding-x);
@@ -507,7 +513,7 @@ header .language {
 	}
 }
 
-/* news */
+/* ##### news ##### */
 .news {
 	color: var(--secondary-color);
 	padding: 5rem var(--padding-x);

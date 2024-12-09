@@ -6,13 +6,13 @@ const heroSection = document.querySelector(".hero");
 const imageSpread = document.querySelector(".image-spread-out");
 const carouselWrapper = document.querySelector(".carousel-wrapper");
 const pagination = document.querySelector(".pagination");
-
+// get width of any card to prepare for calculator translate
 const widthCard = carouselWrapper.children[1].getBoundingClientRect().width + 10 * 2;
-
+// first render all images into cards
 [...carouselWrapper.children].forEach((card) => {
 	card.style.backgroundImage = `url(${card.dataset.src})`;
 });
-
+// clear previous current active, prepare for next card
 function clearActive() {
 	[...carouselWrapper.children].forEach((card) => {
 		card.classList.remove("active");
@@ -21,7 +21,7 @@ function clearActive() {
 		page.classList.remove("active");
 	});
 }
-
+// main slider translate for carousel
 carouselWrapper.addEventListener("click", (e) => {
 	const transitionTime = 500;
 	if (e.target && e.target.classList.contains("image")) {
@@ -59,15 +59,15 @@ carouselWrapper.addEventListener("click", (e) => {
 	}
 });
 
-const sliderParter = document.querySelector(".slider");
-const clone = [...sliderParter.children];
-
+// clone double time for smooth infinite scroll
+const sliderPartner = document.querySelector(".slider");
+const clone = [...sliderPartner.children];
 clone.forEach((node) => {
 	const clonedNode = node.cloneNode(true);
-	sliderParter.appendChild(clonedNode);
+	sliderPartner.appendChild(clonedNode);
 });
 
-// obser countup in about us section
+// obserser count up in about us section
 const observer = new IntersectionObserver(
 	(entries, observer) => {
 		entries.forEach((entry) => {
@@ -98,7 +98,6 @@ function startCount(element, finalValue) {
 			// Tính giá trị hiện tại theo easing để chậm dần
 			const easedValue = easeOutQuad(frame / totalFrames) * finalValue;
 			element.innerText = Math.round(easedValue);
-
 			// Gọi lại sau mỗi khung hình
 			setTimeout(() => updateCount(frame + 1), 1000 / frameRate);
 		} else {
@@ -120,6 +119,7 @@ countUps.forEach((count) => {
 	observer.observe(count);
 });
 
+// handle event in "service" section
 const imageSupportReason = document.querySelector(".image-support");
 function handleSwitchImgSupport() {
 	imageSupportReason.appendChild(imageSupportReason.firstElementChild);
@@ -152,7 +152,7 @@ btnNext.addEventListener("click", () => {
 	imgService.src = listImage[currentImg].srcImg;
 });
 
-// scroll event
+// scroll event for header
 let lastScrollTop = 0; // Lưu vị trí cuộn trước đó
 const mobileHeader = document.querySelector(".mobile-header");
 window.addEventListener("scroll", function () {
