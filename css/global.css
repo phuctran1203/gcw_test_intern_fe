@@ -1,0 +1,106 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	/* color */
+	--primary-color: hsla(12, 88%, 54%, 1);
+	--primary-ghost-color: hsla(12, 100%, 92%, 1);
+	--secondary-color: hsla(221, 29%, 22%, 1);
+	--background-color: hsla(0, 0%, 100%, 1);
+	--text-white: hsla(0, 0%, 98%, 1);
+	/* font size responsive*/
+	--fs-sm: clamp(12px, 0.8vw, 14px);
+	--fs-md: clamp(16px, 1vw, 20px);
+	--fs-lg: clamp(20px, 1.2vw, 24px);
+	--fs-xl: clamp(28px, 1.5vw, 32px);
+	--fs-2xl: clamp(36px, 2vw, 40px);
+	--fs-3xl: clamp(42px, 2.5vw, 48px);
+	--fs-4xl: clamp(56px, 3vw, 64px);
+	/* other var */
+	--padding-x: clamp(10px, 10vw, 200px);
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--background-color);
+	color: var(--text-white);
+}
+
+/* typo */
+h1 {
+	font-size: var(--fs-4xl);
+	line-height: 100px;
+}
+h2 {
+	font-size: var(--fs-3xl);
+	line-height: 1.3;
+}
+h3 {
+	font-size: var(--fs-2xl);
+	line-height: 1.3;
+}
+h4 {
+	font-size: var(--fs-xl);
+	line-height: 1.3;
+}
+h5 {
+	font-size: var(--fs-lg);
+	line-height: 1.4;
+}
+p {
+	font-size: var(--fs-lg);
+	line-height: 30px;
+}
+button {
+	font-size: var(--fs-md);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+}
+a {
+	font-size: var(--fs-md);
+	color: var(--secondary-color);
+	text-decoration: none;
+}
+.small-text {
+	font-size: var(--fs-sm);
+}
+/* re-use class */
+.bold {
+	font-weight: bold;
+}
+.add-cursor {
+	cursor: pointer;
+}
+.badge {
+	background-color: var(--primary-color);
+	color: var(--text-white);
+	border-radius: 30px;
+	padding: 4px 10px;
+}
+.btn-ghost {
+	padding: 1rem 6px;
+	background-color: transparent;
+	border: 0;
+	transition: 0.1s linear;
+	&:hover {
+		color: var(--primary-color);
+		background-color: var(--primary-ghost-color);
+	}
+}
+.btn-primary {
+	border-radius: 50px;
+	color: var(--text-white);
+	background-color: var(--primary-color);
+	font-weight: bold;
+	padding: 14px 20px;
+	display: flex;
+	gap: 12px;
+	border: 0;
+	transition: 0.1s linear;
+	&:hover {
+		background-color: hsla(12, 88%, 80%, 1);
+	}
+}

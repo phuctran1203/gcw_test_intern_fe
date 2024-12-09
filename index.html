@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GCW Test Intern</title>
+		<!-- font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+			integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- custom -->
+		<link rel="stylesheet" href="./css/index.css" />
+		<script defer src="./js/index.js"></script>
+	</head>
+	<body>
+		<header>
+			<!-- logo -->
+			<img src="./assets/logo.svg" alt="" width="48px" />
+			<!-- nav -->
+			<div class="nav">
+				<a href="" class="bold">Về chúng tôi</a>
+				<button class="bold add-cursor" popovertarget="popover-service" id="service">Dịch vụ</button>
+				<div popover id="popover-service" class="popover popover-nav-item">
+					<a href="" class="btn-ghost">Logistic</a>
+					<a href="" class="btn-ghost">Giải pháp kinh doanh hàng hóa quốc tế</a>
+					<a href="" class="btn-ghost">Outsourcing về hàng hóa</a>
+				</div>
+				<a href="" class="bold">Sản phẩm</a>
+				<button class="bold add-cursor" popovertarget="popover-news-market" id="news-market">
+					Tin tức & Thị trường
+				</button>
+				<div popover id="popover-news-market" class="popover popover-nav-item">
+					<a href="" class="btn-ghost">Tin tức thị trường</a>
+					<a href="" class="btn-ghost">Tin tức báo chí</a>
+				</div>
+				<button class="bold add-cursor" popovertarget="popover-staff" id="staff">Nhân lực</button>
+				<div popover id="popover-staff" class="popover popover-nav-item">
+					<a href="" class="btn-ghost">Tuyển dụng</a>
+					<a href="" class="btn-ghost">Hoạt động nhân lực</a>
+				</div>
+				<a href="" class="bold">Video & Hình ảnh</a>
+				<a href="" class="bold">Liên hệ</a>
+			</div>
+			<!-- language -->
+			<div>
+				<button popovertarget="popover-language" id="btn-language" class="add-cusor">
+					<i class="fa-solid fa-earth-asia"></i>
+					<span id="language-label" class="bold">VI</span>
+					<i class="fa-solid fa-chevron-down"></i>
+				</button>
+				<div popover id="popover-language" class="popover">
+					<button class="btn-ghost" data-value="EN" onclick="changeLanguage(event)">Tiếng Anh</button>
+					<button class="btn-ghost" data-value="VI" onclick="changeLanguage(event)">Tiếng Việt</button>
+					<button class="btn-ghost" data-value="TQ" onclick="changeLanguage(event)">Tiếng Trung</button>
+				</div>
+			</div>
+		</header>
+		<!-- hero -->
+		<section class="hero" style="background-image: url(./assets/images/hero_06.png)">
+			<div class="image-spread-out" style="background-image: url(./assets/images/hero_01.png)"></div>
+			<div class="hero-text">
+				<div class="text">
+					<h1>HẬU CẦN</h1>
+					<p>
+						Lorem ipsum dolor sit amet consectetur. Varius nisi amet nullam id. Eu odio et cras nisi eu congue faucibus
+						sit. Pretium proin dignissim urna aenean rhoncus feugiat. Dui phasellus sed tellus nunc.
+					</p>
+				</div>
+				<button class="btn-more btn-primary add-cursor">
+					<span>Tìm hiểu ngay</span>
+					<div class="icon-btn">
+						<i class="fa-solid fa-arrow-right"></i>
+					</div>
+				</button>
+			</div>
+
+			<div class="carousel">
+				<div class="carousel-wrapper">
+					<div class="image add-cursor active" data-src="./assets/images/hero_01.png" data-page="0"></div>
+					<div class="image add-cursor" data-src="./assets/images/hero_02.png" data-page="1"></div>
+					<div class="image add-cursor" data-src="./assets/images/hero_03.png" data-page="2"></div>
+					<div class="image add-cursor" data-src="./assets/images/hero_04.jpg" data-page="3"></div>
+					<div class="image add-cursor" data-src="./assets/images/hero_05.png" data-page="4"></div>
+					<div class="image add-cursor" data-src="./assets/images/hero_06.png" data-page="5"></div>
+				</div>
+			</div>
+
+			<div class="pagination">
+				<div class="active"></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</section>
+		<!-- about us -->
+		<section class="about">
+			<div class="about-text">
+				<div>
+					<h3>VỀ CHÚNG TÔI</h3>
+					<p>
+						Lorem ipsum dolor sit amet consectetur. Varius nisi amet nullam id. Eu odio et cras nisi eu congue faucibus
+						sit. Pretium proin dignissim urna aenean Varius nisi amet nullam id. Eu odio et cras nisi eu
+					</p>
+				</div>
+
+				<div class="number-achieve">
+					<div>
+						<h3><span class="count-up" data-value="50">0</span>+</h3>
+						<span>Varius nisi amet nullam id</span>
+					</div>
+					<div>
+						<h3><span class="count-up" data-value="500">0</span>+</h3>
+						<span>Varius nisi amet nullam id</span>
+					</div>
+					<div>
+						<h3><span class="count-up" data-value="250">0</span>+</h3>
+						<span>Varius nisi amet nullam id</span>
+					</div>
+					<div>
+						<h3><span class="count-up" data-value="4000">0</span>+</h3>
+						<span>Varius nisi amet nullam id</span>
+					</div>
+				</div>
+				<div>
+					<button class="btn-more btn-primary add-cursor">
+						<span>Tìm hiểu thêm</span>
+						<div class="icon-btn">
+							<i class="fa-solid fa-arrow-right"></i>
+						</div>
+					</button>
+				</div>
+			</div>
+
+			<div class="map-decor">
+				<img src="./assets/icons/Earth.svg" alt="" />
+			</div>
+		</section>
+		<!-- service section -->
+		<section class="service">
+			<h3>DỊCH VỤ CỦA CHÚNG TÔI</h3>
+			<div class="center">
+				<h5>Cung cấp giải pháp về hậu cần</h5>
+				<div class="image-center">
+					<div class="image">
+						<img src="./assets/images/service_01.png" alt="" />
+					</div>
+				</div>
+				<div>
+					<button class="next add-cursor"><i class="fa-solid fa-arrow-right"></i></button>
+				</div>
+			</div>
+			<button class="btn-more btn-primary add-cursor">
+				<span>Tìm hiểu thêm</span>
+				<div class="icon-btn">
+					<i class="fa-solid fa-arrow-right"></i>
+				</div>
+			</button>
+		</section>
+		<!-- partner -->
+		<section class="partner">
+			<h3>ĐỐI TÁC CỦA CHÚNG TÔI</h3>
+			<div class="wrapper-slider">
+				<div class="slider">
+					<img src="./assets/logo.svg" alt="" />
+					<img src="./assets/logo.svg" alt="" />
+					<img src="./assets/logo.svg" alt="" />
+					<img src="./assets/logo.svg" alt="" />
+					<img src="./assets/logo.svg" alt="" />
+					<img src="./assets/logo.svg" alt="" />
+					<img src="./assets/logo.svg" alt="" />
+					<img src="./assets/logo.svg" alt="" />
+					<img src="./assets/logo.svg" alt="" />
+				</div>
+			</div>
+		</section>
+		<!-- reason choose us -->
+		<section class="reason">
+			<div class="image-support add-cursor" onclick="handleSwitchImgSupport()">
+				<div>
+					<img src="./assets/images/reason_01.png" alt="" />
+				</div>
+				<div>
+					<img src="./assets/images/reason_02.png" alt="" />
+				</div>
+			</div>
+
+			<div class="reason-text">
+				<h3>LÝ DO CHỌN CHÚNG TÔI</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur. Varius nisi amet nullam id. Eu odio et cras nisi eu congue faucibus
+					sit. Pretium proin dignissim urna aenean Varius nisi amet nullam id. Eu odio et cras nisi eu
+				</p>
+				<div class="wrapper-card">
+					<div class="card">
+						<div class="icon">
+							<i class="fa-regular fa-sun"></i>
+						</div>
+						<p class="bold">Độ uy tín</p>
+						<p>Lorem ipsum dolor sit amet consectetur. Varius nisi amet nullam id. Eu odio et cras nisi eu</p>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<i class="fa-regular fa-sun"></i>
+						</div>
+						<p class="bold">Độ uy tín</p>
+						<p>Lorem ipsum dolor sit amet consectetur. Varius nisi amet nullam id. Eu odio et cras nisi eu</p>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<i class="fa-regular fa-sun"></i>
+						</div>
+						<p class="bold">Độ uy tín</p>
+						<p>Lorem ipsum dolor sit amet consectetur. Varius nisi amet nullam id. Eu odio et cras nisi eu</p>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<i class="fa-regular fa-sun"></i>
+						</div>
+						<p class="bold">Độ uy tín</p>
+						<p>Lorem ipsum dolor sit amet consectetur. Varius nisi amet nullam id. Eu odio et cras nisi eu</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- customer feedback -->
+		<section class="feedback">
+			<h3>KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI</h3>
+			<div class="pagination">
+				<i class="fa-solid fa-chevron-left"></i>
+				<div class="dot">
+					<i class="fa-solid fa-circle"></i>
+					<i class="fa-solid fa-circle"></i>
+					<i class="fa-solid fa-circle"></i>
+					<i class="fa-solid fa-circle"></i>
+				</div>
+				<i class="fa-solid fa-chevron-right"></i>
+			</div>
+			<div class="wrapper-card">
+				<div class="card">
+					<div class="image">
+						<img src="./assets/images/customer_01.png" alt="" />
+					</div>
+					<div class="text">
+						<p>
+							“Eu odio et cras nisi eu congue faucibus sit. Pretium proin dignissim urna aenean Varius nisi amet nullam
+							id. Eu odio et cras nisi eu.”
+						</p>
+						<div class="author-info">
+							<div>
+								<span class="bold">Ms Taylor</span>
+								<span>Founder ABC</span>
+							</div>
+							<i class="fa-solid fa-quote-right"></i>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img src="./assets/images/customer_02.png" alt="" />
+					</div>
+					<div class="text">
+						<p>
+							“Eu odio et cras nisi eu congue faucibus sit. Pretium proin dignissim urna aenean Varius nisi amet nullam
+							id. Eu odio et cras nisi eu.”
+						</p>
+						<div class="author-info">
+							<div>
+								<span class="bold">Mr David</span>
+								<span>Founder ABC</span>
+							</div>
+							<i class="fa-solid fa-quote-right"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- news -->
+		<section class="news">
+			<div class="head">
+				<h3>TIN TỨC</h3>
+				<div>
+					<a href="">Xem tất cả</a>
+					<div class="icon add-cursor"><i class="fa-solid fa-arrow-left"></i></div>
+					<div class="icon add-cursor"><i class="fa-solid fa-arrow-right"></i></div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="card" style="background-image: url(./assets/images/news_01.png)">
+					<div>
+						<div class="sub-title">
+							<span class="badge">Tin nội bộ</span>
+							<span class="date">20-11-2024</span>
+						</div>
+						<h4 class="title">Lorem ipsum dolor sit amet consectetur Varius nisi amet nullam id</h4>
+					</div>
+				</div>
+				<div class="card" style="background-image: url(./assets/images/news_02.png)">
+					<div>
+						<div class="sub-title">
+							<span class="badge">Tin thị trường</span>
+							<span class="date">20-11-2024</span>
+						</div>
+						<h4 class="title">Lorem ipsum dolor sit amet consectetur Varius nisi amet nullam id</h4>
+					</div>
+				</div>
+				<div class="card" style="background-image: url(./assets/images/news_03.png)">
+					<div>
+						<div class="sub-title">
+							<span class="badge">Tin thị trường</span>
+							<span class="date">20-11-2024</span>
+						</div>
+						<h4 class="title">Lorem ipsum dolor sit amet consectetur Varius nisi amet nullam id</h4>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- footer -->
+		<footer>
+			<div class="main-footer">
+				<div>
+					<div>
+						<img src="./assets/logo.svg" alt="" />
+					</div>
+					<p>
+						Lorem ipsum dolor sit amet consectetur. Varius nisi amet nullam id. Eu odio et cras nisi eu congue faucibus
+						sit. Pretium proin dignissim
+					</p>
+					<form action="">
+						<p class="bold">Đăng kí nhận thông tin</p>
+						<div class="wrapper-input">
+							<div>
+								<i class="fa-regular fa-envelope"></i>
+								<input type="text" placeholder="Nhập Email của bạn" />
+							</div>
+							<button class="btn-primary">
+								<span> Đăng ký ngay</span>
+								<i class="fa-regular fa-hand-pointer"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+				<div>
+					<h5>Công ty</h5>
+					<a href="">Về chúng tôi</a>
+					<a href="">Dịch vụ</a>
+					<a href="">Sản phẩm</a>
+					<a href="">Tin tức & Thị trường</a>
+					<a href="">Nhân lực</a>
+				</div>
+				<div>
+					<h5>Dịch vụ</h5>
+					<a href="">Logistic</a>
+					<a href="">Giải pháp kinh doanh hàng hoá quốc tế</a>
+					<a href="">Outsourcing về hàng hoá</a>
+				</div>
+				<div>
+					<h5>Liên lạc</h5>
+					<a href=""><i class="fa-solid fa-phone"></i> <span> +84 124.567.888</span></a>
+					<a href=""><i class="fa-solid fa-envelope"></i><span> hbhfbdh@gmail.com</span></a>
+				</div>
+			</div>
+			<hr />
+			<div class="sub-footer">
+				<span>All rights reserved.</span>
+				<div>
+					<img class="icon" src="./assets/icons/facebook-svgrepo-com.svg" alt="" />
+					<img class="icon" src="./assets/icons/youtube-svgrepo-com.svg" alt="" />
+					<img class="icon" src="./assets/icons/tiktok-logo-logo-svgrepo-com.svg" alt="" />
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
