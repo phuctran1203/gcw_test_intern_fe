@@ -28,6 +28,9 @@ carouselWrapper.addEventListener("click", (e) => {
 		const children = [...carouselWrapper.children];
 
 		const index = children.indexOf(e.target);
+		if (index === 0) {
+			return;
+		}
 		const pageNumber = e.target.dataset.page;
 		// reset active card and pagination
 		clearActive();
@@ -147,4 +150,22 @@ btnNext.addEventListener("click", () => {
 	service.style.backgroundImage = `url(${listImage[currentImg].srcImg})`;
 	labelService.innerText = listImage[currentImg].label;
 	imgService.src = listImage[currentImg].srcImg;
+});
+
+// scroll event
+let lastScrollTop = 0; // Lưu vị trí cuộn trước đó
+const mobileHeader = document.querySelector(".mobile-header");
+window.addEventListener("scroll", function () {
+	const currentScrollTop = window.scrollY;
+
+	if (currentScrollTop > lastScrollTop) {
+		// cuộn lên
+		mobileHeader.style.translate = "0 -100%";
+	} else if (currentScrollTop - lastScrollTop <= -10) {
+		// cuộn xuống
+		mobileHeader.style.translate = "0 0";
+	}
+
+	// Cập nhật vị trí cuộn trước đó
+	lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
 });

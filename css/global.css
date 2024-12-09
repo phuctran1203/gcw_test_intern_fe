@@ -17,9 +17,9 @@
 	--fs-xl: clamp(28px, 1.5vw, 32px);
 	--fs-2xl: clamp(36px, 2vw, 40px);
 	--fs-3xl: clamp(42px, 2.5vw, 48px);
-	--fs-4xl: clamp(56px, 3vw, 64px);
+	--fs-4xl: clamp(48px, 3vw, 64px);
 	/* other var */
-	--padding-x: clamp(10px, 10vw, 200px);
+	--padding-x: clamp(8px, 5vw, 200px);
 }
 body {
 	font-family: Arial, Helvetica, sans-serif;

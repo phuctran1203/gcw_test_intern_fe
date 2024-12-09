@@ -4,6 +4,24 @@
 } */
 
 /* ###### header ###### */
+.mobile-header {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	background-color: var(--text-white);
+	justify-content: space-between;
+	align-items: center;
+	color: var(--secondary-color);
+	padding: 0.4rem var(--padding-x);
+	transition: 0.1s linear;
+	img {
+		width: 40px;
+	}
+	#toggle-nav {
+		font-size: var(--fs-2xl);
+	}
+}
 header {
 	z-index: 100;
 	position: absolute;
@@ -127,8 +145,8 @@ header #popover-language {
 	z-index: 0;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	row-gap: 30px;
 	grid-template-rows: 1fr 15px;
+	row-gap: 30px;
 	padding-bottom: 5%;
 	position: relative;
 	--transtion: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -155,7 +173,6 @@ header #popover-language {
 		content: "";
 		width: 100%;
 		height: 100%;
-
 		position: absolute;
 		background-image: linear-gradient(to top, var(--secondary-color), hsla(0, 0%, 0%, 0.06));
 	}
@@ -260,6 +277,7 @@ header #popover-language {
 }
 
 .about .map-decor {
+	max-width: 100%;
 	display: grid;
 	place-content: center;
 	padding: 0 50px;
@@ -605,12 +623,13 @@ footer {
 footer .main-footer {
 	display: grid;
 	grid-template-columns: 6fr 2fr 2fr 2fr;
-	gap: 2rem;
-	padding: 1rem 0;
+	gap: 3%;
+	margin: 1rem 0;
 	> * {
 		display: flex;
 		flex-direction: column;
 		gap: 0.8rem;
+		width: 100%;
 	}
 	> :nth-child(1) {
 		margin-right: 6rem;
@@ -643,7 +662,7 @@ footer hr {
 	border: 1px solid #0001;
 }
 footer .sub-footer {
-	padding: 1rem 0;
+	margin: 1rem 0;
 	display: flex;
 	justify-content: space-between;
 	.icon {
